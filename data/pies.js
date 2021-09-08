@@ -6,8 +6,8 @@ export const pies = [
     value: '$377.03',
     usd: 'USD',
     upordown: 'up',
-    percentages: '$2.36 | +4.32%',
-    shares: '4 shares',
+    percentages: '$7.03 (+1.90%)',
+    shares: '5 stocks',
   },
   {
     id: '2',
@@ -16,8 +16,8 @@ export const pies = [
     value: '$250.05',
     usd: 'USD',
     upordown: 'down',
-    percentages: '$3.04 | -0.90%',
-    shares: '3 shares',
+    percentages: '$3.04 (-0.90%)',
+    shares: '3 stocks',
   },
   {
     id: '3',
@@ -26,8 +26,8 @@ export const pies = [
     value: '$152.00',
     usd: 'USD',
     upordown: 'up',
-    percentages: '$2.36 | +4.32%',
-    shares: '34 shares',
+    percentages: '$2.36 (+4.32%)',
+    shares: '34 stocks',
   },
   {
     id: '4',
@@ -36,7 +36,7 @@ export const pies = [
     value: '$2502.16',
     usd: 'USD',
     upordown: 'up',
-    percentages: '$2.36 | +4.32%',
-    shares: '15 shares',
+    percentages: '$0.56 (+0.32%)',
+    shares: '15 stocks',
   },
 ];

@@ -2,6 +2,7 @@ import React from 'react';
 import {StyleSheet, Text, View, ScrollView, Image} from 'react-native';
 
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
+import ProgressCircle from 'react-native-progress-circle';
 
 import {wishlist} from '../data/wishlist';
 
@@ -31,9 +32,17 @@ const WishlistCard = () => {
               <Text style={styles.piePercent}>{w.percentages}</Text>
             </View>
             <View style={styles.circleRow}>
-              <View style={styles.circle}>
-                <Text style={styles.circleText}>12.03%</Text>
-              </View>
+              <ProgressCircle
+                percent={85}
+                radius={19}
+                borderWidth={3}
+                color="#dcc3e7"
+                shadowColor="#510a74"
+                backgroundColor="#fff">
+                <Text style={{fontSize: 9, fontWeight: 'bold'}}>
+                  {w.circle}
+                </Text>
+              </ProgressCircle>
               <Text style={styles.pieShares}>{w.shares}</Text>
             </View>
           </View>
@@ -46,19 +55,9 @@ const WishlistCard = () => {
 export default WishlistCard;
 
 const styles = StyleSheet.create({
-  circle: {
-    width: 35,
-    height: 35,
-    borderRadius: 17,
-    borderWidth: 1,
-    borderStyle: 'solid',
-    borderColor: '#9e74b2',
-    borderLeftColor: '#510a74',
-    borderLeftWidth: 3,
-    marginHorizontal: 15,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
+  // I re-used some of the identifiers from the PieCard
+  // styling, because I am sometimes *lazy*
+
   circleRow: {
     flexDirection: 'row',
     justifyContent: 'space-evenly',
@@ -68,13 +67,15 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
   compLogo: {
-    width: 30,
-    height: 30,
+    width: 25,
+    height: 25,
+    marginVertical: 9,
+    marginRight: 5,
   },
   container: {
     backgroundColor: 'white',
     width: 210,
-    height: 200,
+    height: 210,
     borderRadius: 15,
     justifyContent: 'flex-start',
     alignItems: 'flex-start',
@@ -92,14 +93,15 @@ const styles = StyleSheet.create({
     marginBottom: 2,
   },
   piePercent: {
-    marginLeft: 5,
+    paddingLeft: 1,
     color: '#77c917',
+    fontWeight: 'bold',
   },
   pieShares: {
-    fontSize: 11,
+    fontSize: 12,
     color: '#9e74b2',
-    marginVertical: 11,
-    marginLeft: 30,
+    marginVertical: 21,
+    marginLeft: 70,
   },
   pieTitle: {
     padding: 8,
@@ -111,9 +113,11 @@ const styles = StyleSheet.create({
     padding: 9,
   },
   subTitle: {
-    fontSize: 12,
-    color: '#cfd4c8',
+    fontSize: 10,
+    // color: '#cfd4c8',
+    color: '#b9bbc1',
     marginTop: -12,
+    paddingLeft: 6,
   },
   titleRow: {
     flexDirection: 'row',

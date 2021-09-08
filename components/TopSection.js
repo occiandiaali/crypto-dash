@@ -32,8 +32,7 @@ const TopSection = () => {
         </View>
         <View style={styles.portfolioToday}>
           <Icon name="triangle" color="#39e312" style={styles.triangle} />
-          <Text style={styles.todayValues}>$20.23 | 2.00%</Text>
-          <Icon name="chevron-right" color="#39e312" size={21} />
+          <Text style={styles.todayValues}>$20.23 ( 2.03% )</Text>
           <Text style={styles.todayText}>Today</Text>
         </View>
         <Text style={styles.pies}>Your Pies</Text>
@@ -47,11 +46,11 @@ export default TopSection;
 const styles = StyleSheet.create({
   beekeeper: {
     backgroundColor: 'white',
-    padding: 9,
+    padding: 5,
     margin: 13,
     width: 39,
     height: 39,
-    borderRadius: 5,
+    borderRadius: 7,
   },
   container: {
     height: '37%',
@@ -82,6 +81,7 @@ const styles = StyleSheet.create({
     padding: 12,
   },
   pies: {
+    fontSize: 18,
     color: 'white',
     marginTop: 8,
     marginBottom: 12,
@@ -89,14 +89,17 @@ const styles = StyleSheet.create({
   portfolioCaret: {
     marginVertical: 10,
   },
+  portfolioContainer: {
+    paddingLeft: 7,
+  },
   portfolioLabel: {
     flexDirection: 'row',
   },
   portfolioToday: {
     flexDirection: 'row',
     backgroundColor: 'white',
-    width: '47%',
-    padding: 2,
+    width: '48%',
+    padding: 3,
     borderRadius: 13,
     marginBottom: 8,
   },
@@ -106,10 +109,10 @@ const styles = StyleSheet.create({
   portfolioUSDSymbol: {
     fontSize: 12,
     color: 'white',
-    marginVertical: 15,
+    marginVertical: 17,
   },
   portfolioUSDValue: {
-    fontSize: 26,
+    fontSize: 31,
     color: 'white',
     marginRight: 8,
     fontWeight: 'bold',
@@ -129,6 +132,7 @@ const styles = StyleSheet.create({
   },
   todayText: {
     fontWeight: 'bold',
+    paddingLeft: 6,
   },
   todayValues: {
     fontSize: 14,
@@ -137,6 +141,7 @@ const styles = StyleSheet.create({
   },
   triangle: {
     paddingRight: 4,
+    paddingLeft: 2,
     marginVertical: 3,
   },
   userEmail: {
@@ -156,5 +161,6 @@ const styles = StyleSheet.create({
   userIdRow: {
     flexDirection: 'row',
     justifyContent: 'space-between',
+    marginBottom: -15,
   },
 });

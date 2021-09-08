@@ -27,26 +27,12 @@ const Dashboard = () => {
   return (
     <View style={styles.container}>
       <StatusBar hidden={true} />
-
       <TopSection />
       <PiesCard />
-      {/* <View>
-        <ScrollView
-          horizontal
-          style={styles.oLay}
-          showsHorizontalScrollIndicator={false}>
-          <Text style={styles.scText}>ONE</Text>
-          <Text style={styles.scText}>TWO</Text>
-          <Text style={styles.scText}>THREE</Text>
-          <Text style={styles.scText}>FOUR</Text>
-        </ScrollView>
-      </View> */}
-
-      {/* <ContentCard /> */}
-      <Text style={styles.sectionLabel}>WatchList</Text>
+      <Text style={styles.sectionLabel}>Watchlist</Text>
       <WishlistCard />
 
-      <Pressable style={styles.fab}>
+      <Pressable style={styles.fab} android_ripple={{radius: 44}}>
         <Icon name="plus" color="white" />
       </Pressable>
     </View>
@@ -58,14 +44,17 @@ export default Dashboard;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#e7e1ea',
+    // backgroundColor: '#e7e1ea',
+    backgroundColor: '#f4eff6',
+    marginTop: -7,
   },
   fab: {
     width: 45,
     height: 45,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#d61fc5',
+    backgroundColor: '#fd05ff',
+    // backgroundColor: '#ea24f4',
     borderRadius: 12,
     position: 'absolute',
     bottom: 10,
@@ -116,6 +105,7 @@ const styles = StyleSheet.create({
   },
   sectionLabel: {
     fontSize: 16,
+    fontWeight: 'bold',
     marginTop: 5,
     padding: 7,
   },

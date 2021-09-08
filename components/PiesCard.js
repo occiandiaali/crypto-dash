@@ -18,14 +18,17 @@ const PiesCard = () => {
             {/* This View container represents each card for the WatchList */}
             <Text style={styles.pieTitle}>{pie.title}</Text>
             {pie.upordown === 'up' ? (
+              // I could use some type of npm package like
+              // react-native-chart-kit to render the line graphs
+              // but I'm using static images for this demo
               <Image
-                source={require('./../assets/images/line-chart.png')}
+                source={require('./../assets/images/red_line_graph.png')}
                 style={styles.graphImg}
               />
             ) : (
               <Image
                 source={require('./../assets/images/down_graph.png')}
-                style={styles.graphImg}
+                style={{width: 120, height: 60}}
               />
             )}
             <View style={styles.valueRow}>
@@ -69,20 +72,23 @@ const styles = StyleSheet.create({
   },
   graphImg: {
     width: 150,
-    height: 80,
+    height: 60,
   },
   oLay: {
-    marginTop: -26,
+    marginTop: -30,
   },
   percentRow: {
     flexDirection: 'row',
   },
   piePercent: {
-    marginLeft: 5,
+    paddingLeft: 1,
     color: '#77c917',
+    fontWeight: 'bold',
   },
   pieShares: {
-    color: '#cfd4c8',
+    marginTop: 6,
+    fontSize: 13,
+    color: '#9e74b2',
   },
   pieTitle: {
     padding: 8,

@@ -19,7 +19,7 @@ const screenOptions = (route, color) => {
       iconName = 'circle-slice-2';
       break;
     case 'Currency':
-      iconName = 'currency-usd';
+      iconName = 'currency-usd-circle-outline';
       break;
     case 'Search':
       iconName = 'magnify';
