@@ -9,8 +9,10 @@ const WishlistCard = () => {
   return (
     <View>
       <ScrollView horizontal showsHorizontalScrollIndicator={false}>
-        {wishlist.map(w => (
-          <View style={styles.container}>
+        {/* Flatlist would be more efficient for larger data sets */}
+        {wishlist.map((w, idx) => (
+          <View key={idx} style={styles.container}>
+            {/* This View container represents each card for the WatchList */}
             <View style={styles.titleRow}>
               <Image source={w.logo} style={styles.compLogo} />
               <View>
@@ -18,10 +20,7 @@ const WishlistCard = () => {
                 <Text style={styles.subTitle}>{w.subTitle}</Text>
               </View>
             </View>
-            <Image
-              source={require('./../assets/images/line-chart.png')}
-              style={styles.graphImg}
-            />
+            <Image source={w.graphImg} style={styles.graphImg} />
 
             <View style={styles.valueRow}>
               <Text style={styles.valueText}>{w.value}</Text>
@@ -31,7 +30,12 @@ const WishlistCard = () => {
               <Icon name="arrow-up-bold" color="#77c917" size={16} />
               <Text style={styles.piePercent}>{w.percentages}</Text>
             </View>
-            <Text style={styles.pieShares}>{w.shares}</Text>
+            <View style={styles.circleRow}>
+              <View style={styles.circle}>
+                <Text style={styles.circleText}>12.03%</Text>
+              </View>
+              <Text style={styles.pieShares}>{w.shares}</Text>
+            </View>
           </View>
         ))}
       </ScrollView>
@@ -42,6 +46,27 @@ const WishlistCard = () => {
 export default WishlistCard;
 
 const styles = StyleSheet.create({
+  circle: {
+    width: 35,
+    height: 35,
+    borderRadius: 17,
+    borderWidth: 1,
+    borderStyle: 'solid',
+    borderColor: '#9e74b2',
+    borderLeftColor: '#510a74',
+    borderLeftWidth: 3,
+    marginHorizontal: 15,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  circleRow: {
+    flexDirection: 'row',
+    justifyContent: 'space-evenly',
+  },
+  circleText: {
+    fontSize: 8,
+    fontWeight: 'bold',
+  },
   compLogo: {
     width: 30,
     height: 30,
@@ -59,18 +84,22 @@ const styles = StyleSheet.create({
   },
   graphImg: {
     width: 150,
-    height: 80,
+    height: 60,
   },
 
   percentRow: {
     flexDirection: 'row',
+    marginBottom: 2,
   },
   piePercent: {
     marginLeft: 5,
     color: '#77c917',
   },
   pieShares: {
-    color: '#cfd4c8',
+    fontSize: 11,
+    color: '#9e74b2',
+    marginVertical: 11,
+    marginLeft: 30,
   },
   pieTitle: {
     padding: 8,

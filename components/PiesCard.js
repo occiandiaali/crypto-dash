@@ -12,8 +12,10 @@ const PiesCard = () => {
         horizontal
         style={styles.oLay}
         showsHorizontalScrollIndicator={false}>
-        {pies.map(pie => (
-          <View style={styles.container}>
+        {/* Flatlist would be more efficient for larger data sets */}
+        {pies.map((pie, index) => (
+          <View key={index} style={styles.container}>
+            {/* This View container represents each card for the WatchList */}
             <Text style={styles.pieTitle}>{pie.title}</Text>
             {pie.upordown === 'up' ? (
               <Image
