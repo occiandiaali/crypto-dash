@@ -14,6 +14,8 @@ import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import {useBottomTabBarHeight} from '@react-navigation/bottom-tabs';
 import ContentCard from '../components/ContentCard';
 import TopSection from '../components/TopSection';
+import PiesCard from '../components/PiesCard';
+import WishlistCard from '../components/WishlistCard';
 
 const {width} = Dimensions.get('screen');
 
@@ -27,7 +29,8 @@ const Dashboard = () => {
       <StatusBar hidden={true} />
 
       <TopSection />
-      <View>
+      <PiesCard />
+      {/* <View>
         <ScrollView
           horizontal
           style={styles.oLay}
@@ -37,9 +40,11 @@ const Dashboard = () => {
           <Text style={styles.scText}>THREE</Text>
           <Text style={styles.scText}>FOUR</Text>
         </ScrollView>
-      </View>
+      </View> */}
 
-      <ContentCard />
+      {/* <ContentCard /> */}
+      <Text style={styles.sectionLabel}>WatchList</Text>
+      <WishlistCard />
 
       <Pressable style={styles.fab}>
         <Icon name="plus" color="white" />
@@ -68,7 +73,7 @@ const styles = StyleSheet.create({
     elevation: 20,
   },
   header: {
-    height: '27%',
+    height: '24%',
     padding: 9,
     borderBottomLeftRadius: 10,
     borderBottomRightRadius: 10,
@@ -108,6 +113,11 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     marginHorizontal: 13,
     marginRight: 4,
+  },
+  sectionLabel: {
+    fontSize: 16,
+    marginTop: 5,
+    padding: 7,
   },
   statTextView: {
     flex: 1,
