@@ -83,7 +83,7 @@ const styles = StyleSheet.create({
   pies: {
     fontSize: 18,
     color: 'white',
-    marginTop: 8,
+    marginTop: -8,
     marginBottom: 12,
   },
   portfolioCaret: {
@@ -153,9 +153,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     margin: 20,
     padding: 2,
-    // backgroundColor: '#cbadd8',
     backgroundColor: '#cc98e3',
-    width: '35%',
+    width: '36%',
     borderRadius: 26,
   },
   userIdRow: {

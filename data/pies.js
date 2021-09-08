@@ -29,14 +29,4 @@ export const pies = [
     percentages: '$2.36 (+4.32%)',
     shares: '34 stocks',
   },
-  {
-    id: '4',
-    title: 'Fashion Pie',
-    graphImg: './../assets/images/line-chart.png',
-    value: '$2502.16',
-    usd: 'USD',
-    upordown: 'up',
-    percentages: '$0.56 (+0.32%)',
-    shares: '15 stocks',
-  },
 ];

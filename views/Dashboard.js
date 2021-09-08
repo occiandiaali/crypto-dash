@@ -12,7 +12,7 @@ import {
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
 import {useBottomTabBarHeight} from '@react-navigation/bottom-tabs';
-import ContentCard from '../components/ContentCard';
+
 import TopSection from '../components/TopSection';
 import PiesCard from '../components/PiesCard';
 import WishlistCard from '../components/WishlistCard';
@@ -23,7 +23,7 @@ const ITEM_WIDTH = width * 0.9;
 const ITEM_HEIGHT = ITEM_WIDTH * 0.9;
 
 const Dashboard = () => {
-  const tabBarheight = useBottomTabBarHeight();
+  const tabBarHeight = useBottomTabBarHeight();
   return (
     <View style={styles.container}>
       <StatusBar hidden={true} />
@@ -32,7 +32,7 @@ const Dashboard = () => {
       <Text style={styles.sectionLabel}>Watchlist</Text>
       <WishlistCard />
 
-      <Pressable style={styles.fab} android_ripple={{radius: 44}}>
+      <Pressable style={styles.fab} android_ripple={{radius: 34}}>
         <Icon name="plus" color="white" />
       </Pressable>
     </View>
@@ -44,9 +44,9 @@ export default Dashboard;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    // backgroundColor: '#e7e1ea',
     backgroundColor: '#f4eff6',
     marginTop: -7,
+    marginBottom: 72,
   },
   fab: {
     width: 45,
@@ -54,7 +54,6 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: '#fd05ff',
-    // backgroundColor: '#ea24f4',
     borderRadius: 12,
     position: 'absolute',
     bottom: 10,

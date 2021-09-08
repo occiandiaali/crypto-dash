@@ -41,6 +41,7 @@ const TabNavigator = () => {
     <Tab.Navigator
       screenOptions={({route}) => ({
         tabBarIcon: ({color}) => screenOptions(route, color),
+        tabBarStyle: {position: 'absolute'},
       })}>
       <Tab.Screen
         name="Home"
