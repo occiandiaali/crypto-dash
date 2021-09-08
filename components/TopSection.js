@@ -58,7 +58,8 @@ const styles = StyleSheet.create({
     padding: 7,
     borderBottomLeftRadius: 10,
     borderBottomRightRadius: 10,
-    backgroundColor: '#9e74b2',
+    // backgroundColor: '#9e74b2',
+    backgroundColor: '#c67fe7',
   },
   headerText: {
     padding: 9,
@@ -131,6 +132,7 @@ const styles = StyleSheet.create({
   },
   todayValues: {
     fontSize: 14,
+    fontWeight: 'bold',
     color: '#39e312',
   },
   triangle: {
@@ -146,7 +148,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     margin: 20,
     padding: 2,
-    backgroundColor: '#cbadd8',
+    // backgroundColor: '#cbadd8',
+    backgroundColor: '#cc98e3',
     width: '35%',
     borderRadius: 26,
   },
