@@ -67,7 +67,7 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-start',
     alignItems: 'flex-start',
     padding: 8,
-    marginHorizontal: 11,
+    marginHorizontal: 9,
   },
   graphImg: {
     width: 150,

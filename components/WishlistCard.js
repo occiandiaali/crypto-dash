@@ -33,11 +33,11 @@ const WishlistCard = () => {
             </View>
             <View style={styles.circleRow}>
               <ProgressCircle
-                percent={85}
+                percent={w.pcPercent}
                 radius={19}
                 borderWidth={3}
                 color="#dcc3e7"
-                shadowColor="#510a74"
+                shadowColor="#c34b18"
                 backgroundColor="#fff">
                 <Text style={{fontSize: 9, fontWeight: 'bold'}}>
                   {w.circle}
@@ -80,7 +80,7 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-start',
     alignItems: 'flex-start',
     padding: 8,
-    marginHorizontal: 11,
+    marginHorizontal: 9,
   },
   graphImg: {
     width: 150,
