@@ -9,6 +9,7 @@ export const wishlist = [
     usd: 'USD',
     percentages: '$2.16 (+4.32%)',
     circle: '13.83%',
+    pcPercent: 83,
     shares: '~0.034 shares',
   },
   {
@@ -21,6 +22,7 @@ export const wishlist = [
     usd: 'USD',
     percentages: '$0.70 (+1.99%)',
     circle: '9.47%',
+    pcPercent: 65,
     shares: '+0.014 shares',
   },
   {
@@ -33,6 +35,7 @@ export const wishlist = [
     usd: 'USD',
     percentages: '$5.45 (+4.32%)',
     circle: '2.12%',
+    pcPercent: 92,
     shares: '+0.066 shares',
   },
   {
@@ -45,6 +48,7 @@ export const wishlist = [
     usd: 'USD',
     percentages: '$8.16 (+9.23%)',
     circle: '23.82%',
+    pcPercent: 23,
     shares: '+1.254 shares',
   },
 ];
