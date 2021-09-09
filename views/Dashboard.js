@@ -29,11 +29,16 @@ const Dashboard = () => {
       <StatusBar hidden={true} />
       <TopSection />
       <PiesCard />
+      <View style={styles.pagination}>
+        <View style={styles.pagination1}></View>
+        <View style={styles.pagination2}></View>
+        <View style={styles.pagination3}></View>
+      </View>
       <Text style={styles.sectionLabel}>Watchlist</Text>
       <WishlistCard />
 
       <Pressable style={styles.fab} android_ripple={{radius: 34}}>
-        <Icon name="plus" color="white" />
+        <Icon name="plus" color="white" size={18} />
       </Pressable>
     </View>
   );
@@ -90,6 +95,34 @@ const styles = StyleSheet.create({
   },
   oLay: {
     marginTop: -26,
+  },
+  pagination: {
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginTop: 11,
+    marginBottom: -15,
+  },
+  pagination1: {
+    backgroundColor: '#9843c1',
+    width: 28,
+    height: 7,
+    marginRight: 6,
+    borderRadius: 13,
+  },
+  pagination2: {
+    backgroundColor: '#a8afc1',
+    width: 28,
+    height: 7,
+    marginRight: 6,
+    borderRadius: 13,
+  },
+  pagination3: {
+    backgroundColor: '#a8afc1',
+    width: 28,
+    height: 7,
+    marginRight: 6,
+    borderRadius: 13,
   },
   scText: {
     width: 210,
